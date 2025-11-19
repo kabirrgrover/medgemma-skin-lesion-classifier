@@ -179,6 +179,8 @@ python scripts/evaluate.py \
 - **Batch Size**: 4-8 (depending on GPU memory)
 - **Epochs**: 20-30 (with early stopping)
 - **Dropout**: 0.1
+- **Training Hardware**: NVIDIA A100-SXM4-40GB GPU (Google Colab Pro)
+- **Training Time**: ~3 hours for 30 epochs on A100
 
 ## 🔍 Explainability & Uncertainty
 
@@ -209,6 +211,60 @@ Uncertainty quantification through:
 - **HAM10000**: [Skin Cancer MNIST Dataset](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
 - **Focal Loss**: Lin et al., "Focal Loss for Dense Object Detection" (2017)
 - **Grad-CAM**: Selvaraju et al., "Grad-CAM: Visual Explanations from Deep Networks" (2017)
+
+## 🚀 Next Steps & Future Work
+
+### Immediate Priorities
+
+1. **Gradio Web Interface**
+   - Interactive demo for image upload and prediction
+   - Real-time Grad-CAM visualization
+   - Confidence scores and uncertainty display
+   - User-friendly interface for clinicians and researchers
+
+2. **FastAPI REST Endpoint**
+   - Production-ready API for integration
+   - Batch prediction support
+   - Model versioning and health checks
+   - Documentation with OpenAPI/Swagger
+
+3. **Enhanced Calibration**
+   - Implement Platt scaling and isotonic regression
+   - Compare calibration methods on validation set
+   - Create calibration curves and reliability diagrams
+
+### Research & Development
+
+4. **External Validation**
+   - Test on additional datasets (ISIC, PH2)
+   - Cross-dataset generalization analysis
+   - Fairness evaluation across demographic groups
+
+5. **Model Improvements**
+   - Experiment with deeper classifier architectures
+   - Explore ensemble methods for robustness
+   - Investigate QLoRA fine-tuning of encoder
+   - Advanced data augmentation (mixup, cutmix)
+
+6. **Production Deployment**
+   - Model quantization for edge devices
+   - ONNX export for cross-platform inference
+   - Docker containerization
+   - CI/CD pipeline for model updates
+
+### Long-Term Vision
+
+7. **Clinical Integration**
+   - Prospective validation studies
+   - Integration with PACS systems
+   - Real-world performance monitoring
+   - Feedback loop for continuous improvement
+
+8. **Advanced Features**
+   - Multi-task learning (segmentation + classification)
+   - Temporal analysis for lesion tracking
+   - Integration with patient history
+   - Explainability for multi-class predictions
 
 ## 🤝 Contributing
 
